@@ -1,0 +1,18 @@
+DestinationPath: 
+  =>
+  { 
+    List<string> extensions = new List<string> {".html",".cshtml",".md"};
+    var pagesPath = new NormalizedPath("pages");
+    var relativePath = pagesPath.GetRelativePath(Document.Destination);
+    var extension = Document.Destination.Extension;
+    Context.LogDebug($"extension:{extension}");
+    if(extensions.Any(str => str == extension))
+    {
+      var newDestination = relativePath.ChangeExtension("html");
+      Context.LogDebug($"newDestination:{newDestination}");
+      return newDestination;
+    } else
+    {
+      return relativePath;
+    }
+  }

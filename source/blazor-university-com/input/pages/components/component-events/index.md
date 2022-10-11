@@ -16,8 +16,10 @@ consuming components can specify in Razor mark-up which method to call when the 
 
 In a new Blazor app, edit the **/Pages/Counter.razor** file and add a new callback parameter.
 
-`[Parameter]
-public EventCallback<int> OnMultipleOfThree { get; set; }`
+```razor
+[Parameter]
+public EventCallback<int> OnMultipleOfThree { get; set; }
+```
 
 This declares a new `EventCallback` named OnMultipleOfThree that any consuming component can register an interest in.
 The `<int>` specifies that the value emitted by the event callback will be a `System.Int32`.

@@ -9,10 +9,10 @@ order: 4
 **Credit:** This page was inspired by a Twitter post by the user [ℳisterℳagoo](https://twitter.com/mistermag00).
 
 At first, it might seem unintuitive, or perhaps a little odd, to think of declaring a `[Parameter]` property of type `RenderFragment<RenderFragment>`.
-
+```razor
 [Parameter]
 public RenderFragment<RenderFragment> ChildContent { get; set; }
-
+```
 The fact is, if you have ever created a [Custom Blazor layout](/layouts/creating-a-blazor-layout/) then you are already
 familiar with a similar concept.
 
